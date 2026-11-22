@@ -1,0 +1,99 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Planning Retirement by Age: What to Do in Your 20s, 30s, 40s and 50s | Age Calculator</title>
+<meta name="description" content="A decade-by-decade guide to retirement planning — how much to save, when to start, and the milestones that matter at every age.">
+<style>
+*{box-sizing:border-box;margin:0;padding:0}
+body{font-family:Georgia,'Times New Roman',serif;color:#334155;background:#fdf8f6;line-height:1.7}
+a{color:#9d174d;text-decoration:none}
+a:hover{text-decoration:underline}
+header{background:#881337;color:#fff;padding:16px 0}
+.header-in{max-width:720px;margin:0 auto;padding:0 20px;text-align:center}
+.logo{font-size:26px;font-weight:700;color:#fff}
+.logo span{color:#fbcfe8}
+nav{margin-top:8px}
+nav a{color:#fbcfe8;margin:0 10px;font-weight:600;font-size:15px}
+nav a:hover{color:#fff}
+.hero{background:linear-gradient(180deg,#881337,#be185d);color:#fff;padding:48px 20px 40px;text-align:center}
+.hero h1{font-size:34px;line-height:1.25;margin-bottom:10px}
+.hero p{font-size:17px;max-width:600px;margin:0 auto 22px;color:#fce7f3}
+.calculator{background:#fff;color:#334155;max-width:560px;margin:0 auto;padding:26px;border-radius:16px;box-shadow:0 12px 32px rgba(0,0,0,.2);text-align:left}
+.calculator h2{font-size:20px;margin-bottom:14px;color:#9d174d}
+.field{margin-bottom:14px}
+.field label{display:block;font-size:14px;font-weight:700;margin-bottom:5px;color:#475569}
+.field input,.field select{width:100%;padding:11px;border:1px solid #cbd5e1;border-radius:8px;font-size:16px;font-family:inherit}
+.btn{display:block;width:100%;padding:13px;background:#be185d;color:#fff;border:none;border-radius:10px;font-size:17px;font-weight:700;cursor:pointer}
+.btn:hover{background:#9d174d}
+.result-box{margin-top:18px;background:#fdf2f8;border:1px solid #f9a8d4;border-radius:12px;padding:18px;font-size:17px}
+.result-box .big{font-size:26px;font-weight:700;color:#9d174d}
+.result-box .row{display:flex;justify-content:space-between;border-bottom:1px dashed #f9a8d4;padding:7px 0}
+.result-box .row:last-child{border-bottom:none}
+.countdown{display:flex;gap:10px;justify-content:center;margin-top:14px}
+.countdown .cd{background:#fff;border:1px solid #f9a8d4;border-radius:10px;padding:10px 14px;text-align:center;min-width:74px}
+.countdown .cd b{display:block;font-size:24px;color:#9d174d}
+.countdown .cd span{font-size:12px;color:#64748b}
+.note{background:#fffbeb;border:1px solid #fde68a;border-radius:10px;padding:12px 16px;font-size:14px;margin:16px 0;font-family:Arial,Helvetica,sans-serif}
+main{max-width:720px;margin:0 auto;padding:36px 20px}
+section{margin-bottom:40px}
+h2.sec{font-size:25px;margin-bottom:6px;color:#9d174d}
+.sec-sub{color:#64748b;margin-bottom:18px;font-family:Arial,Helvetica,sans-serif}
+.tool-list{display:flex;flex-direction:column;gap:12px}
+.tool-card{display:block;background:#fff;border:1px solid #e2e8f0;border-radius:12px;padding:18px 20px}
+.tool-card h3{font-size:18px;margin-bottom:4px}
+.tool-card p{font-size:14px;color:#64748b;font-family:Arial,Helvetica,sans-serif}
+.article-list{display:flex;flex-direction:column;gap:20px}
+.article-card{display:flex;gap:16px;background:#fff;border:1px solid #e2e8f0;border-radius:12px;overflow:hidden}
+.article-card img{width:200px;min-height:140px;object-fit:cover;display:block}
+.article-card .card-body{padding:16px 16px 16px 0}
+.article-card h3{font-size:17px;margin-bottom:6px;line-height:1.4}
+.article-card p{font-size:14px;color:#64748b;font-family:Arial,Helvetica,sans-serif}
+.article-page img.hero-img{width:100%;height:auto;border-radius:12px;margin:16px 0 24px}
+.article-page h1{font-size:30px;line-height:1.3;margin-bottom:8px}
+.article-page h2{font-size:22px;margin:26px 0 10px;color:#9d174d}
+.article-page p{margin-bottom:14px}
+.article-page ul,.article-page ol{margin:0 0 14px 22px}
+.article-page li{margin-bottom:6px}
+.faq{background:#fdf2f8;border:1px solid #f9a8d4;border-radius:12px;padding:20px;margin-top:28px}
+.faq h2{margin-top:0}
+.faq p{margin-bottom:12px}
+.meta{color:#94a3b8;font-size:14px;margin-bottom:10px;font-family:Arial,Helvetica,sans-serif}
+footer{background:#4c0519;color:#fbcfe8;padding:32px 20px;margin-top:20px;text-align:center}
+footer a{color:#f9a8d4}
+footer p{font-size:14px;font-family:Arial,Helvetica,sans-serif}
+@media(max-width:640px){.hero h1{font-size:27px}.article-card{flex-direction:column}.article-card img{width:100%;height:180px}.countdown{flex-wrap:wrap}}
+</style>
+</head>
+<body>
+<header><div class="header-in"><a class="logo" href="/index.html">Age<span>Calculator</span></a>
+<nav><a href="/index.html">Home</a><a href="/tools/birthday-countdown.html">Birthday Countdown</a><a href="/tools/zodiac-finder.html">Zodiac Finder</a><a href="/tools/age-in-days-weeks-months.html">Age in Days</a><a href="/tools/retirement-age-calculator.html">Retirement Age</a><a href="/about.html">About</a></nav></div></header>
+<main><div class="article-page">
+<p class="meta"><a href="/index.html">Home</a> &rsaquo; Guides &rsaquo; Planning Retirement by Age: What to Do in Your 20s, 30s, 40s and 50s</p>
+<h1>Planning Retirement by Age: What to Do in Your 20s, 30s, 40s and 50s</h1>
+<p class="meta">AgeCalculator guides</p>
+<img class="hero-img" src="/images/retirement-planning-age.jpg" alt="Planning Retirement by Age: What to Do in Your 20s, 30s, 40s and 50s">
+<p>Retirement planning feels like a problem for old people, right up until the moment it becomes urgent. The truth is that the best time to start is in your twenties, when small savings have forty years to grow, and the second-best time is today. This guide explains what to do at every age, how much you need, and the mistakes that cost people the most.</p>
+<h2>Your 20s: start small, start now</h2>
+<p>In your twenties, retirement feels impossibly far away, and your income is probably low. But time is your greatest asset: money saved at 25 has forty years to compound, and a small monthly amount can grow into a large sum. If you save 100 a month from age 25 at a 5 percent real return, you will have about 150,000 by age 65. Start at 35 instead, and the same monthly amount gives you about 80,000. The ten-year delay costs you almost half the final amount.</p>
+<p>The practical steps are simple. Join your employer's pension scheme, especially if the employer matches your contributions — that match is free money. Pay off expensive debt first, because a credit card charging 20 percent interest costs more than any investment earns. Build an emergency fund of three months' expenses so that a broken car does not force you to raid your retirement savings. And do not worry about the amount: the habit matters more than the number.</p>
+<h2>Your 30s and 40s: the building years</h2>
+<p>Your thirties and forties are the years when your income rises and your responsibilities grow — a home, children, a mortgage. Retirement saving competes with all of them, and it is tempting to put it off. But these are also the years when compound growth does its heaviest work, and the years when a pension contribution is most valuable, because you are likely paying a higher rate of tax and the tax relief is worth more.</p>
+<p>Aim to save 10 to 15 percent of your income for retirement, including any employer contribution. If that is not possible, save what you can and increase it by one percent each year — you will barely notice the difference in your take-home pay, and the total will grow steadily. Check your pension statement every year, make sure your investments are diversified, and do not panic when markets fall: a fall in your forties is a buying opportunity, because you have twenty years for the market to recover.</p>
+<h2>Your 50s: the final push</h2>
+<p>Your fifties are the decade when retirement stops being abstract. The children are older, the mortgage is smaller, and your income is usually at its peak. This is the time to save aggressively: increase your contributions, pay off the mortgage if you can, and get a realistic estimate of what your retirement will cost. Most people underestimate how long they will live — a 65-year-old today can expect to live into their mid-eighties — and underestimate how much they will need.</p>
+<p>Get professional advice in your fifties, even if you have never had it before. A financial adviser can help you plan the order in which to draw your pensions and savings, which affects how much tax you pay. Check your state pension entitlement and fill any gaps in your contribution record. And think about what retirement will actually look like: where you will live, what you will do, and how you will spend your time. The money is only half the plan.</p>
+<h2>How much do you actually need?</h2>
+<p>A common rule of thumb is that you need 70 to 80 percent of your pre-retirement income to maintain your standard of living, because some costs — commuting, work clothes, pension contributions — disappear. Another rule is the 25-times rule: save 25 times your annual spending, so that a 4 percent annual withdrawal covers your costs. If you spend 30,000 a year, you need 750,000. That sounds like a lot, and it is — but it includes your state pension, your employer pension and your personal savings together.</p>
+<p>The honest answer is that the number depends on your life. Someone who owns their home outright and lives simply needs far less than someone who rents in an expensive city and travels widely. The best approach is to work out your expected annual spending in retirement, multiply by the number of years you expect to live, and subtract the pensions you will receive. The gap is what you need to save — and the earlier you start, the smaller the monthly amount has to be.</p>
+<div class="faq"><h2>Frequently asked questions</h2>
+<p><strong>How much should I save for retirement?</strong><br>Aim for 10 to 15 percent of your income, including employer contributions.</p>
+<p><strong>When should I start saving for retirement?</strong><br>As early as possible — money saved at 25 is worth roughly twice as much as money saved at 35.</p>
+<p><strong>What is the 25-times rule?</strong><br>Save 25 times your annual spending, so a 4 percent withdrawal covers your costs.</p>
+</div>
+<p style="margin-top:24px"><a href="/index.html">&larr; Back to all guides</a></p></div></main>
+<footer><p><strong>AgeCalculator</strong> — free, exact age tools that run entirely in your browser.</p>
+<p><a href="/about.html">About</a> &middot; <a href="/contact.html">Contact</a> &middot; <a href="/privacy.html">Privacy Policy</a> &middot; <a href="/disclaimer.html">Disclaimer</a></p></footer>
+</body>
+</html>

@@ -1,0 +1,98 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Your Age in Days, Weeks and Months: What the Numbers Mean | Age Calculator</title>
+<meta name="description" content="Convert your age into days, weeks and months, and learn why each measure is used — from baby milestones to retirement planning.">
+<style>
+*{box-sizing:border-box;margin:0;padding:0}
+body{font-family:Georgia,'Times New Roman',serif;color:#334155;background:#fdf8f6;line-height:1.7}
+a{color:#9d174d;text-decoration:none}
+a:hover{text-decoration:underline}
+header{background:#881337;color:#fff;padding:16px 0}
+.header-in{max-width:720px;margin:0 auto;padding:0 20px;text-align:center}
+.logo{font-size:26px;font-weight:700;color:#fff}
+.logo span{color:#fbcfe8}
+nav{margin-top:8px}
+nav a{color:#fbcfe8;margin:0 10px;font-weight:600;font-size:15px}
+nav a:hover{color:#fff}
+.hero{background:linear-gradient(180deg,#881337,#be185d);color:#fff;padding:48px 20px 40px;text-align:center}
+.hero h1{font-size:34px;line-height:1.25;margin-bottom:10px}
+.hero p{font-size:17px;max-width:600px;margin:0 auto 22px;color:#fce7f3}
+.calculator{background:#fff;color:#334155;max-width:560px;margin:0 auto;padding:26px;border-radius:16px;box-shadow:0 12px 32px rgba(0,0,0,.2);text-align:left}
+.calculator h2{font-size:20px;margin-bottom:14px;color:#9d174d}
+.field{margin-bottom:14px}
+.field label{display:block;font-size:14px;font-weight:700;margin-bottom:5px;color:#475569}
+.field input,.field select{width:100%;padding:11px;border:1px solid #cbd5e1;border-radius:8px;font-size:16px;font-family:inherit}
+.btn{display:block;width:100%;padding:13px;background:#be185d;color:#fff;border:none;border-radius:10px;font-size:17px;font-weight:700;cursor:pointer}
+.btn:hover{background:#9d174d}
+.result-box{margin-top:18px;background:#fdf2f8;border:1px solid #f9a8d4;border-radius:12px;padding:18px;font-size:17px}
+.result-box .big{font-size:26px;font-weight:700;color:#9d174d}
+.result-box .row{display:flex;justify-content:space-between;border-bottom:1px dashed #f9a8d4;padding:7px 0}
+.result-box .row:last-child{border-bottom:none}
+.countdown{display:flex;gap:10px;justify-content:center;margin-top:14px}
+.countdown .cd{background:#fff;border:1px solid #f9a8d4;border-radius:10px;padding:10px 14px;text-align:center;min-width:74px}
+.countdown .cd b{display:block;font-size:24px;color:#9d174d}
+.countdown .cd span{font-size:12px;color:#64748b}
+.note{background:#fffbeb;border:1px solid #fde68a;border-radius:10px;padding:12px 16px;font-size:14px;margin:16px 0;font-family:Arial,Helvetica,sans-serif}
+main{max-width:720px;margin:0 auto;padding:36px 20px}
+section{margin-bottom:40px}
+h2.sec{font-size:25px;margin-bottom:6px;color:#9d174d}
+.sec-sub{color:#64748b;margin-bottom:18px;font-family:Arial,Helvetica,sans-serif}
+.tool-list{display:flex;flex-direction:column;gap:12px}
+.tool-card{display:block;background:#fff;border:1px solid #e2e8f0;border-radius:12px;padding:18px 20px}
+.tool-card h3{font-size:18px;margin-bottom:4px}
+.tool-card p{font-size:14px;color:#64748b;font-family:Arial,Helvetica,sans-serif}
+.article-list{display:flex;flex-direction:column;gap:20px}
+.article-card{display:flex;gap:16px;background:#fff;border:1px solid #e2e8f0;border-radius:12px;overflow:hidden}
+.article-card img{width:200px;min-height:140px;object-fit:cover;display:block}
+.article-card .card-body{padding:16px 16px 16px 0}
+.article-card h3{font-size:17px;margin-bottom:6px;line-height:1.4}
+.article-card p{font-size:14px;color:#64748b;font-family:Arial,Helvetica,sans-serif}
+.article-page img.hero-img{width:100%;height:auto;border-radius:12px;margin:16px 0 24px}
+.article-page h1{font-size:30px;line-height:1.3;margin-bottom:8px}
+.article-page h2{font-size:22px;margin:26px 0 10px;color:#9d174d}
+.article-page p{margin-bottom:14px}
+.article-page ul,.article-page ol{margin:0 0 14px 22px}
+.article-page li{margin-bottom:6px}
+.faq{background:#fdf2f8;border:1px solid #f9a8d4;border-radius:12px;padding:20px;margin-top:28px}
+.faq h2{margin-top:0}
+.faq p{margin-bottom:12px}
+.meta{color:#94a3b8;font-size:14px;margin-bottom:10px;font-family:Arial,Helvetica,sans-serif}
+footer{background:#4c0519;color:#fbcfe8;padding:32px 20px;margin-top:20px;text-align:center}
+footer a{color:#f9a8d4}
+footer p{font-size:14px;font-family:Arial,Helvetica,sans-serif}
+@media(max-width:640px){.hero h1{font-size:27px}.article-card{flex-direction:column}.article-card img{width:100%;height:180px}.countdown{flex-wrap:wrap}}
+</style>
+</head>
+<body>
+<header><div class="header-in"><a class="logo" href="/index.html">Age<span>Calculator</span></a>
+<nav><a href="/index.html">Home</a><a href="/tools/birthday-countdown.html">Birthday Countdown</a><a href="/tools/zodiac-finder.html">Zodiac Finder</a><a href="/tools/age-in-days-weeks-months.html">Age in Days</a><a href="/tools/retirement-age-calculator.html">Retirement Age</a><a href="/about.html">About</a></nav></div></header>
+<main><div class="article-page">
+<p class="meta"><a href="/index.html">Home</a> &rsaquo; Guides &rsaquo; Your Age in Days, Weeks and Months: What the Numbers Mean</p>
+<h1>Your Age in Days, Weeks and Months: What the Numbers Mean</h1>
+<p class="meta">AgeCalculator guides</p>
+<img class="hero-img" src="/images/age-in-days-weeks-months.jpg" alt="Your Age in Days, Weeks and Months: What the Numbers Mean">
+<p>We usually describe age in years, but years hide a lot of detail. A baby's first year is measured in weeks and months because so much changes so quickly. A 40-year-old has lived about 14,600 days, 2,086 weeks and 480 months, and each of those numbers tells a different story. This guide explains how to work out your age in days, weeks and months, and why each measure is useful for a different purpose.</p>
+<h2>Your age in days</h2>
+<p>Your age in days is the total number of days you have been alive, and it is the most exact single measure of age. To calculate it, count the days from your birth date to today, remembering to add one for every 29 February that falls in between. A person born on 1 January 1990 was 10,000 days old on 18 May 2017, and 15,000 days old on 25 September 2031. These round-number day milestones — 10,000 days, 15,000 days — are popular celebrations, because they arrive at surprising moments in the middle of ordinary years.</p>
+<p>Age in days is used in medicine for newborns and infants, where a difference of a few days can matter for treatment and feeding. It is also used in research, where scientists need a precise measure of age that does not depend on the irregular calendar. For the rest of us, the number is mostly a curiosity — but it is a striking one. A 30-year-old has lived about 11,000 days, which sounds like a lot until you realise that a 90-year-old has lived about 33,000, and that the average human life is roughly 27,000 to 30,000 days.</p>
+<h2>Your age in weeks</h2>
+<p>Divide your age in days by seven to get your age in weeks. A one-year-old is about 52 weeks old, a ten-year-old about 521 weeks, and a fifty-year-old about 2,608 weeks. Weeks are the standard unit for pregnancy — a full-term pregnancy is 40 weeks — and for the first year of a baby's life, when parents and doctors track development week by week. A baby's first smile, first roll, first tooth and first steps are all recorded in weeks, because months are too coarse to capture how fast a baby changes.</p>
+<h2>Your age in months</h2>
+<p>Your age in months is the number of whole calendar months since you were born. A two-year-old is 24 months old, a five-year-old is 60 months, and a 40-year-old is 480 months. Months are the standard unit for the first two years of life: paediatricians track growth, feeding and vaccinations in months, and parents celebrate monthly milestones. After age two, months become less important, and years take over — but months return to importance in retirement planning, where pensions and benefits are often calculated month by month.</p>
+<p>Converting days to months is not exact, because months vary from 28 to 31 days. The average month is 30.44 days long, which is 365.25 divided by 12, so dividing your age in days by 30.44 gives a good estimate of your age in months. For an exact figure, count completed calendar months instead: you complete a month on the same day of the month you were born. If you were born on the 31st, you complete a month on the last day of shorter months, which is why the exact count needs the calendar rather than a calculator.</p>
+<h2>Why different measures matter</h2>
+<p>Each measure of age serves a different purpose. Years are for identity — how old you say you are. Months are for development — how a baby is growing. Weeks are for pregnancy and early infancy. Days are for medicine and research, where precision matters. Hours and minutes are for the first day of life, when a newborn's age is measured in hours. The right unit is the one that matches the question being asked: a doctor needs days, a teacher needs years, and a parent needs weeks.</p>
+<p>There is also a psychological side to these numbers. People often feel that time speeds up as they age, and the numbers explain why: at age ten, a year is a tenth of your life; at age fifty, it is a fiftieth. A thousand days feels long to a child and short to an older adult. Whatever your age in days, weeks or months, the numbers are a reminder that time is the one resource you cannot save, borrow or earn back — which is the best reason to use it well.</p>
+<div class="faq"><h2>Frequently asked questions</h2>
+<p><strong>How many days old is a 30-year-old?</strong><br>About 10,950 days, plus a few extra for leap years.</p>
+<p><strong>How many weeks are in a year?</strong><br>52 weeks, plus one extra day — or two in a leap year.</p>
+<p><strong>How many months old is a 2-year-old?</strong><br>24 months.</p>
+</div>
+<p style="margin-top:24px"><a href="/index.html">&larr; Back to all guides</a></p></div></main>
+<footer><p><strong>AgeCalculator</strong> — free, exact age tools that run entirely in your browser.</p>
+<p><a href="/about.html">About</a> &middot; <a href="/contact.html">Contact</a> &middot; <a href="/privacy.html">Privacy Policy</a> &middot; <a href="/disclaimer.html">Disclaimer</a></p></footer>
+</body>
+</html>

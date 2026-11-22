@@ -1,0 +1,99 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Famous Birthdays That Changed History | Age Calculator</title>
+<meta name="description" content="The birthdays of people who changed the world — from scientists and artists to leaders and inventors — and what their lives tell us about age and achievement.">
+<style>
+*{box-sizing:border-box;margin:0;padding:0}
+body{font-family:Georgia,'Times New Roman',serif;color:#334155;background:#fdf8f6;line-height:1.7}
+a{color:#9d174d;text-decoration:none}
+a:hover{text-decoration:underline}
+header{background:#881337;color:#fff;padding:16px 0}
+.header-in{max-width:720px;margin:0 auto;padding:0 20px;text-align:center}
+.logo{font-size:26px;font-weight:700;color:#fff}
+.logo span{color:#fbcfe8}
+nav{margin-top:8px}
+nav a{color:#fbcfe8;margin:0 10px;font-weight:600;font-size:15px}
+nav a:hover{color:#fff}
+.hero{background:linear-gradient(180deg,#881337,#be185d);color:#fff;padding:48px 20px 40px;text-align:center}
+.hero h1{font-size:34px;line-height:1.25;margin-bottom:10px}
+.hero p{font-size:17px;max-width:600px;margin:0 auto 22px;color:#fce7f3}
+.calculator{background:#fff;color:#334155;max-width:560px;margin:0 auto;padding:26px;border-radius:16px;box-shadow:0 12px 32px rgba(0,0,0,.2);text-align:left}
+.calculator h2{font-size:20px;margin-bottom:14px;color:#9d174d}
+.field{margin-bottom:14px}
+.field label{display:block;font-size:14px;font-weight:700;margin-bottom:5px;color:#475569}
+.field input,.field select{width:100%;padding:11px;border:1px solid #cbd5e1;border-radius:8px;font-size:16px;font-family:inherit}
+.btn{display:block;width:100%;padding:13px;background:#be185d;color:#fff;border:none;border-radius:10px;font-size:17px;font-weight:700;cursor:pointer}
+.btn:hover{background:#9d174d}
+.result-box{margin-top:18px;background:#fdf2f8;border:1px solid #f9a8d4;border-radius:12px;padding:18px;font-size:17px}
+.result-box .big{font-size:26px;font-weight:700;color:#9d174d}
+.result-box .row{display:flex;justify-content:space-between;border-bottom:1px dashed #f9a8d4;padding:7px 0}
+.result-box .row:last-child{border-bottom:none}
+.countdown{display:flex;gap:10px;justify-content:center;margin-top:14px}
+.countdown .cd{background:#fff;border:1px solid #f9a8d4;border-radius:10px;padding:10px 14px;text-align:center;min-width:74px}
+.countdown .cd b{display:block;font-size:24px;color:#9d174d}
+.countdown .cd span{font-size:12px;color:#64748b}
+.note{background:#fffbeb;border:1px solid #fde68a;border-radius:10px;padding:12px 16px;font-size:14px;margin:16px 0;font-family:Arial,Helvetica,sans-serif}
+main{max-width:720px;margin:0 auto;padding:36px 20px}
+section{margin-bottom:40px}
+h2.sec{font-size:25px;margin-bottom:6px;color:#9d174d}
+.sec-sub{color:#64748b;margin-bottom:18px;font-family:Arial,Helvetica,sans-serif}
+.tool-list{display:flex;flex-direction:column;gap:12px}
+.tool-card{display:block;background:#fff;border:1px solid #e2e8f0;border-radius:12px;padding:18px 20px}
+.tool-card h3{font-size:18px;margin-bottom:4px}
+.tool-card p{font-size:14px;color:#64748b;font-family:Arial,Helvetica,sans-serif}
+.article-list{display:flex;flex-direction:column;gap:20px}
+.article-card{display:flex;gap:16px;background:#fff;border:1px solid #e2e8f0;border-radius:12px;overflow:hidden}
+.article-card img{width:200px;min-height:140px;object-fit:cover;display:block}
+.article-card .card-body{padding:16px 16px 16px 0}
+.article-card h3{font-size:17px;margin-bottom:6px;line-height:1.4}
+.article-card p{font-size:14px;color:#64748b;font-family:Arial,Helvetica,sans-serif}
+.article-page img.hero-img{width:100%;height:auto;border-radius:12px;margin:16px 0 24px}
+.article-page h1{font-size:30px;line-height:1.3;margin-bottom:8px}
+.article-page h2{font-size:22px;margin:26px 0 10px;color:#9d174d}
+.article-page p{margin-bottom:14px}
+.article-page ul,.article-page ol{margin:0 0 14px 22px}
+.article-page li{margin-bottom:6px}
+.faq{background:#fdf2f8;border:1px solid #f9a8d4;border-radius:12px;padding:20px;margin-top:28px}
+.faq h2{margin-top:0}
+.faq p{margin-bottom:12px}
+.meta{color:#94a3b8;font-size:14px;margin-bottom:10px;font-family:Arial,Helvetica,sans-serif}
+footer{background:#4c0519;color:#fbcfe8;padding:32px 20px;margin-top:20px;text-align:center}
+footer a{color:#f9a8d4}
+footer p{font-size:14px;font-family:Arial,Helvetica,sans-serif}
+@media(max-width:640px){.hero h1{font-size:27px}.article-card{flex-direction:column}.article-card img{width:100%;height:180px}.countdown{flex-wrap:wrap}}
+</style>
+</head>
+<body>
+<header><div class="header-in"><a class="logo" href="/index.html">Age<span>Calculator</span></a>
+<nav><a href="/index.html">Home</a><a href="/tools/birthday-countdown.html">Birthday Countdown</a><a href="/tools/zodiac-finder.html">Zodiac Finder</a><a href="/tools/age-in-days-weeks-months.html">Age in Days</a><a href="/tools/retirement-age-calculator.html">Retirement Age</a><a href="/about.html">About</a></nav></div></header>
+<main><div class="article-page">
+<p class="meta"><a href="/index.html">Home</a> &rsaquo; Guides &rsaquo; Famous Birthdays That Changed History</p>
+<h1>Famous Birthdays That Changed History</h1>
+<p class="meta">AgeCalculator guides</p>
+<img class="hero-img" src="/images/famous-birthdays-history.jpg" alt="Famous Birthdays That Changed History">
+<p>Every famous person was once a baby, and every great achievement began with a birthday. Some of history's most important people did their best work young, some did it late, and some kept going into their nineties. This guide looks at the birthdays of people who changed the world, and what their ages at their greatest achievements tell us about the relationship between age and genius.</p>
+<h2>Young achievers</h2>
+<p>Some of history's greatest achievements were made by the very young. Isaac Newton was 23 when he developed calculus and the theory of gravity during the plague year of 1665. Albert Einstein was 26 when he published his four great papers of 1905, including the theory of relativity. Marie Curie was 31 when she won her first Nobel Prize. Mozart was composing symphonies at eight and wrote his first opera at eleven. Malala Yousafzai was 17 when she won the Nobel Peace Prize, the youngest ever recipient.</p>
+<p>These stories are inspiring, but they are also misleading, because they suggest that genius is a young person's game. In truth, young achievers are the exception, not the rule, and they usually had extraordinary support, education and opportunity. For every Newton there are thousands of people who did their best work much later, and the age at which someone achieves something says little about its value.</p>
+<h2>Late bloomers</h2>
+<p>Many of history's most important figures did their best work late. Charles Darwin was 50 when he published On the Origin of Species. Colonel Sanders was 62 when he founded Kentucky Fried Chicken. Grandma Moses began painting at 78 and became famous in her eighties. Vera Wang did not design her first dress until she was 40. Julia Child published her first cookbook at 49. These late bloomers show that creativity and achievement are not limited to the young.</p>
+<p>The pattern in science is especially interesting: the average age at which Nobel laureates do their prize-winning work has risen steadily, from about 37 in the early twentieth century to about 47 today, because modern science requires longer training and larger teams. In the arts, the pattern is more mixed: novelists often peak in their forties and fifties, while mathematicians often peak in their twenties. The lesson is that there is no single right age to do great work — there is only the age at which you do it.</p>
+<h2>Long lives, long careers</h2>
+<p>Some people keep achieving into very old age. The artist Michelangelo was 89 when he died, still working on the dome of St Peter's. The composer Elliott Carter was writing music at 103. The actress Betty White was working at 99. The physicist John Goodenough won the Nobel Prize at 97, the oldest laureate ever. These long careers remind us that age is not a deadline, and that the desire to create and contribute does not retire.</p>
+<p>The oldest people in history also remind us how much the world has changed. The oldest verified person, Jeanne Calment, lived to 122, and was born in 1875 — before the light bulb, the telephone and the car were common. She met Vincent van Gogh as a girl, and she outlived him by more than a century. Her life spanned three centuries, and her birthday was a reminder that a single human life can contain an extraordinary amount of history.</p>
+<h2>What birthdays teach us about age</h2>
+<p>The birthdays of famous people teach us that age is a poor predictor of achievement. Some people peak young, some peak late, and some never stop. The common thread among the great achievers is not their age but their persistence: Newton worked on his ideas for decades, Darwin spent twenty years gathering evidence, and Grandma Moses painted every day. Talent matters, but sustained effort matters more, and sustained effort is available at any age.</p>
+<p>Your own birthday is a chance to think about what you want to achieve in the year ahead — not in comparison with anyone else, but on your own terms. The famous birthdays in this guide are not a standard to meet but a reminder that it is never too early and never too late. The best time to start is always now.</p>
+<div class="faq"><h2>Frequently asked questions</h2>
+<p><strong>How old was Einstein when he published relativity?</strong><br>26 — in his miracle year of 1905.</p>
+<p><strong>Who is the oldest Nobel Prize winner?</strong><br>John Goodenough, who won the Chemistry prize at 97.</p>
+<p><strong>How old was Jeanne Calment?</strong><br>122 — the oldest verified person in history.</p>
+</div>
+<p style="margin-top:24px"><a href="/index.html">&larr; Back to all guides</a></p></div></main>
+<footer><p><strong>AgeCalculator</strong> — free, exact age tools that run entirely in your browser.</p>
+<p><a href="/about.html">About</a> &middot; <a href="/contact.html">Contact</a> &middot; <a href="/privacy.html">Privacy Policy</a> &middot; <a href="/disclaimer.html">Disclaimer</a></p></footer>
+</body>
+</html>

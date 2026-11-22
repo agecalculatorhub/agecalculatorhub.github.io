@@ -1,0 +1,99 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Age Verification Online: How the Internet Checks Your Age | Age Calculator</title>
+<meta name="description" content="How websites and apps verify your age — from self-declaration to ID checks and age estimation — and what it means for your privacy.">
+<style>
+*{box-sizing:border-box;margin:0;padding:0}
+body{font-family:Georgia,'Times New Roman',serif;color:#334155;background:#fdf8f6;line-height:1.7}
+a{color:#9d174d;text-decoration:none}
+a:hover{text-decoration:underline}
+header{background:#881337;color:#fff;padding:16px 0}
+.header-in{max-width:720px;margin:0 auto;padding:0 20px;text-align:center}
+.logo{font-size:26px;font-weight:700;color:#fff}
+.logo span{color:#fbcfe8}
+nav{margin-top:8px}
+nav a{color:#fbcfe8;margin:0 10px;font-weight:600;font-size:15px}
+nav a:hover{color:#fff}
+.hero{background:linear-gradient(180deg,#881337,#be185d);color:#fff;padding:48px 20px 40px;text-align:center}
+.hero h1{font-size:34px;line-height:1.25;margin-bottom:10px}
+.hero p{font-size:17px;max-width:600px;margin:0 auto 22px;color:#fce7f3}
+.calculator{background:#fff;color:#334155;max-width:560px;margin:0 auto;padding:26px;border-radius:16px;box-shadow:0 12px 32px rgba(0,0,0,.2);text-align:left}
+.calculator h2{font-size:20px;margin-bottom:14px;color:#9d174d}
+.field{margin-bottom:14px}
+.field label{display:block;font-size:14px;font-weight:700;margin-bottom:5px;color:#475569}
+.field input,.field select{width:100%;padding:11px;border:1px solid #cbd5e1;border-radius:8px;font-size:16px;font-family:inherit}
+.btn{display:block;width:100%;padding:13px;background:#be185d;color:#fff;border:none;border-radius:10px;font-size:17px;font-weight:700;cursor:pointer}
+.btn:hover{background:#9d174d}
+.result-box{margin-top:18px;background:#fdf2f8;border:1px solid #f9a8d4;border-radius:12px;padding:18px;font-size:17px}
+.result-box .big{font-size:26px;font-weight:700;color:#9d174d}
+.result-box .row{display:flex;justify-content:space-between;border-bottom:1px dashed #f9a8d4;padding:7px 0}
+.result-box .row:last-child{border-bottom:none}
+.countdown{display:flex;gap:10px;justify-content:center;margin-top:14px}
+.countdown .cd{background:#fff;border:1px solid #f9a8d4;border-radius:10px;padding:10px 14px;text-align:center;min-width:74px}
+.countdown .cd b{display:block;font-size:24px;color:#9d174d}
+.countdown .cd span{font-size:12px;color:#64748b}
+.note{background:#fffbeb;border:1px solid #fde68a;border-radius:10px;padding:12px 16px;font-size:14px;margin:16px 0;font-family:Arial,Helvetica,sans-serif}
+main{max-width:720px;margin:0 auto;padding:36px 20px}
+section{margin-bottom:40px}
+h2.sec{font-size:25px;margin-bottom:6px;color:#9d174d}
+.sec-sub{color:#64748b;margin-bottom:18px;font-family:Arial,Helvetica,sans-serif}
+.tool-list{display:flex;flex-direction:column;gap:12px}
+.tool-card{display:block;background:#fff;border:1px solid #e2e8f0;border-radius:12px;padding:18px 20px}
+.tool-card h3{font-size:18px;margin-bottom:4px}
+.tool-card p{font-size:14px;color:#64748b;font-family:Arial,Helvetica,sans-serif}
+.article-list{display:flex;flex-direction:column;gap:20px}
+.article-card{display:flex;gap:16px;background:#fff;border:1px solid #e2e8f0;border-radius:12px;overflow:hidden}
+.article-card img{width:200px;min-height:140px;object-fit:cover;display:block}
+.article-card .card-body{padding:16px 16px 16px 0}
+.article-card h3{font-size:17px;margin-bottom:6px;line-height:1.4}
+.article-card p{font-size:14px;color:#64748b;font-family:Arial,Helvetica,sans-serif}
+.article-page img.hero-img{width:100%;height:auto;border-radius:12px;margin:16px 0 24px}
+.article-page h1{font-size:30px;line-height:1.3;margin-bottom:8px}
+.article-page h2{font-size:22px;margin:26px 0 10px;color:#9d174d}
+.article-page p{margin-bottom:14px}
+.article-page ul,.article-page ol{margin:0 0 14px 22px}
+.article-page li{margin-bottom:6px}
+.faq{background:#fdf2f8;border:1px solid #f9a8d4;border-radius:12px;padding:20px;margin-top:28px}
+.faq h2{margin-top:0}
+.faq p{margin-bottom:12px}
+.meta{color:#94a3b8;font-size:14px;margin-bottom:10px;font-family:Arial,Helvetica,sans-serif}
+footer{background:#4c0519;color:#fbcfe8;padding:32px 20px;margin-top:20px;text-align:center}
+footer a{color:#f9a8d4}
+footer p{font-size:14px;font-family:Arial,Helvetica,sans-serif}
+@media(max-width:640px){.hero h1{font-size:27px}.article-card{flex-direction:column}.article-card img{width:100%;height:180px}.countdown{flex-wrap:wrap}}
+</style>
+</head>
+<body>
+<header><div class="header-in"><a class="logo" href="/index.html">Age<span>Calculator</span></a>
+<nav><a href="/index.html">Home</a><a href="/tools/birthday-countdown.html">Birthday Countdown</a><a href="/tools/zodiac-finder.html">Zodiac Finder</a><a href="/tools/age-in-days-weeks-months.html">Age in Days</a><a href="/tools/retirement-age-calculator.html">Retirement Age</a><a href="/about.html">About</a></nav></div></header>
+<main><div class="article-page">
+<p class="meta"><a href="/index.html">Home</a> &rsaquo; Guides &rsaquo; Age Verification Online: How the Internet Checks Your Age</p>
+<h1>Age Verification Online: How the Internet Checks Your Age</h1>
+<p class="meta">AgeCalculator guides</p>
+<img class="hero-img" src="/images/age-verification-online.jpg" alt="Age Verification Online: How the Internet Checks Your Age">
+<p>Every day, millions of people are asked to prove their age online: to buy a product, to watch a video, to join a platform, or to play a game. The methods range from a simple checkbox to a scan of a government ID, and they raise difficult questions about privacy, safety and accuracy. This guide explains how age verification works, why it is spreading, and what it means for you.</p>
+<h2>Why websites check age</h2>
+<p>Websites check age for three main reasons: the law, safety, and commercial policy. The law requires age checks for alcohol, tobacco, gambling, adult content and some financial products, and the minimum age varies by country. Safety rules require platforms to protect children from inappropriate content and from contact with adults, and to obtain parental consent before collecting a child's data. Commercial policy covers everything else: a game rated for over-18s, a social network that requires users to be 13, a shop that sells knives.</p>
+<p>The rules are tightening. The UK's Online Safety Act, the EU's Digital Services Act, and similar laws in the United States and Australia all require stronger age checks than the old self-declaration box. The result is that more sites are asking for more proof, and the question of how to verify age without collecting too much personal data has become one of the most important debates in internet policy.</p>
+<h2>The methods, from simplest to strictest</h2>
+<p>The simplest method is self-declaration: the user types their date of birth or ticks a box saying they are over a certain age. It is easy, private and completely unreliable — a child can lie in seconds. The next step is age estimation, where software estimates a person's age from a selfie or a voice sample. It is more reliable than self-declaration, but it makes mistakes, especially for people near the boundary, and it raises concerns about biometric data.</p>
+<p>Stronger methods use documents: a scan of a passport, driving licence or national ID card, checked against a database or by a human reviewer. The strongest methods use bank records, mobile phone contracts or credit checks to confirm age. Each step up the ladder is more reliable and more intrusive, and the challenge for regulators is to find the point where the check is strong enough to protect children without forcing every adult to hand over their ID to every website they visit.</p>
+<h2>Privacy and the risks</h2>
+<p>Age verification creates a privacy problem: the more reliable the check, the more personal data it collects. A scan of a passport contains a photograph, a date of birth, a document number and a home address — enough to steal an identity. If a verification company is hacked, that data can be stolen. If it is sold, it can be misused. Good verification systems minimise this risk by checking the document and then deleting it, or by using a token that confirms the age without storing the document — but not all systems do this well.</p>
+<p>There is also the question of who gets checked. If every site requires ID, then everyone — including adults who have done nothing wrong — must prove their age to browse the internet. Some people worry that this creates a record of what they read and watch, and that it excludes people who do not have ID, such as refugees and the homeless. The debate is not about whether children should be protected, which almost everyone agrees on, but about how to do it without harming adults' privacy and freedom.</p>
+<h2>What to do when you are asked</h2>
+<p>When a site asks you to verify your age, check three things before you comply. First, is the site legitimate — does it have a real privacy policy, a contact address, and a reputation you can check? Second, what data does it ask for, and what does it say it will do with it? A site that asks for a passport scan should explain how the scan is stored, for how long, and who can access it. Third, is there a less intrusive option — an age estimation check, a payment card check, or a verification through a trusted third party?</p>
+<p>Never send a photo of your ID to a site you do not trust, and never send it by email or through an unencrypted connection. If a site's age check feels disproportionate — a news site asking for a passport, for example — consider whether you need to use that site at all. And if you are a parent, talk to your children about age checks: explain why they exist, why lying about age can be risky, and what to do if a site asks for personal information.</p>
+<div class="faq"><h2>Frequently asked questions</h2>
+<p><strong>What is the simplest age check?</strong><br>Self-declaration — typing a date of birth or ticking a box. It is easy but unreliable.</p>
+<p><strong>Is age estimation accurate?</strong><br>Roughly — it works well for clear cases but makes mistakes near the age boundary.</p>
+<p><strong>Should I send my passport to a website?</strong><br>Only to a site you trust, that explains how it stores and deletes the document.</p>
+</div>
+<p style="margin-top:24px"><a href="/index.html">&larr; Back to all guides</a></p></div></main>
+<footer><p><strong>AgeCalculator</strong> — free, exact age tools that run entirely in your browser.</p>
+<p><a href="/about.html">About</a> &middot; <a href="/contact.html">Contact</a> &middot; <a href="/privacy.html">Privacy Policy</a> &middot; <a href="/disclaimer.html">Disclaimer</a></p></footer>
+</body>
+</html>

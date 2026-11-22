@@ -1,0 +1,97 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>How to Calculate Your Exact Age in Years, Months and Days | Age Calculator</title>
+<meta name="description" content="Learn how to work out your exact age — years, months and days — by hand, with the borrowing method, leap years and common mistakes explained.">
+<style>
+*{box-sizing:border-box;margin:0;padding:0}
+body{font-family:Georgia,'Times New Roman',serif;color:#334155;background:#fdf8f6;line-height:1.7}
+a{color:#9d174d;text-decoration:none}
+a:hover{text-decoration:underline}
+header{background:#881337;color:#fff;padding:16px 0}
+.header-in{max-width:720px;margin:0 auto;padding:0 20px;text-align:center}
+.logo{font-size:26px;font-weight:700;color:#fff}
+.logo span{color:#fbcfe8}
+nav{margin-top:8px}
+nav a{color:#fbcfe8;margin:0 10px;font-weight:600;font-size:15px}
+nav a:hover{color:#fff}
+.hero{background:linear-gradient(180deg,#881337,#be185d);color:#fff;padding:48px 20px 40px;text-align:center}
+.hero h1{font-size:34px;line-height:1.25;margin-bottom:10px}
+.hero p{font-size:17px;max-width:600px;margin:0 auto 22px;color:#fce7f3}
+.calculator{background:#fff;color:#334155;max-width:560px;margin:0 auto;padding:26px;border-radius:16px;box-shadow:0 12px 32px rgba(0,0,0,.2);text-align:left}
+.calculator h2{font-size:20px;margin-bottom:14px;color:#9d174d}
+.field{margin-bottom:14px}
+.field label{display:block;font-size:14px;font-weight:700;margin-bottom:5px;color:#475569}
+.field input,.field select{width:100%;padding:11px;border:1px solid #cbd5e1;border-radius:8px;font-size:16px;font-family:inherit}
+.btn{display:block;width:100%;padding:13px;background:#be185d;color:#fff;border:none;border-radius:10px;font-size:17px;font-weight:700;cursor:pointer}
+.btn:hover{background:#9d174d}
+.result-box{margin-top:18px;background:#fdf2f8;border:1px solid #f9a8d4;border-radius:12px;padding:18px;font-size:17px}
+.result-box .big{font-size:26px;font-weight:700;color:#9d174d}
+.result-box .row{display:flex;justify-content:space-between;border-bottom:1px dashed #f9a8d4;padding:7px 0}
+.result-box .row:last-child{border-bottom:none}
+.countdown{display:flex;gap:10px;justify-content:center;margin-top:14px}
+.countdown .cd{background:#fff;border:1px solid #f9a8d4;border-radius:10px;padding:10px 14px;text-align:center;min-width:74px}
+.countdown .cd b{display:block;font-size:24px;color:#9d174d}
+.countdown .cd span{font-size:12px;color:#64748b}
+.note{background:#fffbeb;border:1px solid #fde68a;border-radius:10px;padding:12px 16px;font-size:14px;margin:16px 0;font-family:Arial,Helvetica,sans-serif}
+main{max-width:720px;margin:0 auto;padding:36px 20px}
+section{margin-bottom:40px}
+h2.sec{font-size:25px;margin-bottom:6px;color:#9d174d}
+.sec-sub{color:#64748b;margin-bottom:18px;font-family:Arial,Helvetica,sans-serif}
+.tool-list{display:flex;flex-direction:column;gap:12px}
+.tool-card{display:block;background:#fff;border:1px solid #e2e8f0;border-radius:12px;padding:18px 20px}
+.tool-card h3{font-size:18px;margin-bottom:4px}
+.tool-card p{font-size:14px;color:#64748b;font-family:Arial,Helvetica,sans-serif}
+.article-list{display:flex;flex-direction:column;gap:20px}
+.article-card{display:flex;gap:16px;background:#fff;border:1px solid #e2e8f0;border-radius:12px;overflow:hidden}
+.article-card img{width:200px;min-height:140px;object-fit:cover;display:block}
+.article-card .card-body{padding:16px 16px 16px 0}
+.article-card h3{font-size:17px;margin-bottom:6px;line-height:1.4}
+.article-card p{font-size:14px;color:#64748b;font-family:Arial,Helvetica,sans-serif}
+.article-page img.hero-img{width:100%;height:auto;border-radius:12px;margin:16px 0 24px}
+.article-page h1{font-size:30px;line-height:1.3;margin-bottom:8px}
+.article-page h2{font-size:22px;margin:26px 0 10px;color:#9d174d}
+.article-page p{margin-bottom:14px}
+.article-page ul,.article-page ol{margin:0 0 14px 22px}
+.article-page li{margin-bottom:6px}
+.faq{background:#fdf2f8;border:1px solid #f9a8d4;border-radius:12px;padding:20px;margin-top:28px}
+.faq h2{margin-top:0}
+.faq p{margin-bottom:12px}
+.meta{color:#94a3b8;font-size:14px;margin-bottom:10px;font-family:Arial,Helvetica,sans-serif}
+footer{background:#4c0519;color:#fbcfe8;padding:32px 20px;margin-top:20px;text-align:center}
+footer a{color:#f9a8d4}
+footer p{font-size:14px;font-family:Arial,Helvetica,sans-serif}
+@media(max-width:640px){.hero h1{font-size:27px}.article-card{flex-direction:column}.article-card img{width:100%;height:180px}.countdown{flex-wrap:wrap}}
+</style>
+</head>
+<body>
+<header><div class="header-in"><a class="logo" href="/index.html">Age<span>Calculator</span></a>
+<nav><a href="/index.html">Home</a><a href="/tools/birthday-countdown.html">Birthday Countdown</a><a href="/tools/zodiac-finder.html">Zodiac Finder</a><a href="/tools/age-in-days-weeks-months.html">Age in Days</a><a href="/tools/retirement-age-calculator.html">Retirement Age</a><a href="/about.html">About</a></nav></div></header>
+<main><div class="article-page">
+<p class="meta"><a href="/index.html">Home</a> &rsaquo; Guides &rsaquo; How to Calculate Your Exact Age in Years, Months and Days</p>
+<h1>How to Calculate Your Exact Age in Years, Months and Days</h1>
+<p class="meta">AgeCalculator guides</p>
+<img class="hero-img" src="/images/how-to-calculate-age.jpg" alt="How to Calculate Your Exact Age in Years, Months and Days">
+<p>Your age seems like the simplest number in the world — until someone asks for it in years, months and days, and you realise you have to work it out. The exact age matters more often than you might think: school enrolment, insurance forms, medical records, retirement planning and legal documents all ask for it. This guide shows you how to calculate it by hand, how to handle leap years, and how to check your answer.</p>
+<h2>The basic method: subtract, then borrow</h2>
+<p>Start with today's date and subtract your date of birth. Subtract the years first, then the months, then the days. If the day of the month today is smaller than the day you were born, you need to borrow: take one month from the months column and add the number of days in the previous month to the days. If the month today is smaller than the month you were born, borrow one year and add twelve months. This borrowing method is the same technique you learned for subtraction in school, applied to the calendar.</p>
+<p>Here is an example. Suppose you were born on 14 March 1990 and today is 22 November 2026. Subtract the years: 2026 minus 1990 is 36. Subtract the months: November is month 11, March is month 3, so 11 minus 3 is 8 months. Subtract the days: 22 minus 14 is 8 days. Your exact age is 36 years, 8 months and 8 days. Now try a case that needs borrowing: born 25 June 1990, today 10 February 2026. The day 10 is smaller than 25, so borrow a month: February becomes January in the count, and you add January's 31 days to 10, giving 41 minus 25, which is 16 days. The months are now 1 minus 6, which is negative, so borrow a year: 13 minus 6 is 7 months, and the years drop from 36 to 35. The answer is 35 years, 7 months and 16 days.</p>
+<h2>Leap years and the 29 February problem</h2>
+<p>Leap years add a wrinkle to age calculation because they insert an extra day — 29 February — every four years, with exceptions for century years. If you were born on 29 February, your birthday only appears on the calendar every four years, and the question of when you turn a year older in the intervening years depends on where you live. In most places, the law treats 1 March as your birthday in non-leap years, though some people celebrate on 28 February instead. For age calculation, the convention used by most calculators is that a leap-day birthday falls on 28 February in non-leap years.</p>
+<h2>Age in days, weeks and months</h2>
+<p>Your age in days is simply the number of days between your birth date and today, and it is the most precise way to express how old you are. A 30-year-old has lived about 10,950 days, and a 50-year-old about 18,250. Divide the days by seven for weeks — about 1,565 weeks at age 30 — and by 30.44 for months, since the average month is 30.44 days long. These figures are useful for baby milestones, where parents track age in weeks and months, and for medical records, where a child's age in months determines vaccination schedules and growth charts.</p>
+<h2>Common mistakes to avoid</h2>
+<p>The most common mistake is forgetting to borrow when the day or month is smaller, which makes the answer a month or a year too large. The second is counting the current year as complete — you are 36 only after your 36th birthday has passed, not during the year leading up to it. The third is using 365 days per year when converting years to days, which ignores leap years and drifts by a day every four years. The fourth is mixing up the date formats: 03/04/2026 is 3 April in most of the world and 4 March in the United States.</p>
+<p>The best way to avoid all of these is to use a calculator and then sanity-check the result. Your age in years should equal the current year minus your birth year, minus one if your birthday has not happened yet this year. Your age in months should be roughly your age in years times twelve. And your age in days should be roughly your age in years times 365, plus the number of leap days since you were born. If any of these checks fails, the calculation went wrong somewhere.</p>
+<div class="faq"><h2>Frequently asked questions</h2>
+<p><strong>How do I calculate my age in months?</strong><br>Count the completed calendar months since your birth date — you complete a month on the same day of the month you were born.</p>
+<p><strong>How old am I in days?</strong><br>Count the days between your birth date and today, adding one for every 29 February in between.</p>
+<p><strong>When do leap-day babies celebrate?</strong><br>Most celebrate on 28 February or 1 March in non-leap years; legally it is usually 1 March.</p>
+</div>
+<p style="margin-top:24px"><a href="/index.html">&larr; Back to all guides</a></p></div></main>
+<footer><p><strong>AgeCalculator</strong> — free, exact age tools that run entirely in your browser.</p>
+<p><a href="/about.html">About</a> &middot; <a href="/contact.html">Contact</a> &middot; <a href="/privacy.html">Privacy Policy</a> &middot; <a href="/disclaimer.html">Disclaimer</a></p></footer>
+</body>
+</html>

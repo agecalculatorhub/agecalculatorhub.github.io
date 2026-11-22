@@ -1,0 +1,96 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Your Baby&#x27;s First-Year Age Milestones: Month by Month | Age Calculator</title>
+<meta name="description" content="A month-by-month guide to your baby&#x27;s first year — the milestones to expect at each age, and when to talk to your doctor.">
+<style>
+*{box-sizing:border-box;margin:0;padding:0}
+body{font-family:Georgia,'Times New Roman',serif;color:#334155;background:#fdf8f6;line-height:1.7}
+a{color:#9d174d;text-decoration:none}
+a:hover{text-decoration:underline}
+header{background:#881337;color:#fff;padding:16px 0}
+.header-in{max-width:720px;margin:0 auto;padding:0 20px;text-align:center}
+.logo{font-size:26px;font-weight:700;color:#fff}
+.logo span{color:#fbcfe8}
+nav{margin-top:8px}
+nav a{color:#fbcfe8;margin:0 10px;font-weight:600;font-size:15px}
+nav a:hover{color:#fff}
+.hero{background:linear-gradient(180deg,#881337,#be185d);color:#fff;padding:48px 20px 40px;text-align:center}
+.hero h1{font-size:34px;line-height:1.25;margin-bottom:10px}
+.hero p{font-size:17px;max-width:600px;margin:0 auto 22px;color:#fce7f3}
+.calculator{background:#fff;color:#334155;max-width:560px;margin:0 auto;padding:26px;border-radius:16px;box-shadow:0 12px 32px rgba(0,0,0,.2);text-align:left}
+.calculator h2{font-size:20px;margin-bottom:14px;color:#9d174d}
+.field{margin-bottom:14px}
+.field label{display:block;font-size:14px;font-weight:700;margin-bottom:5px;color:#475569}
+.field input,.field select{width:100%;padding:11px;border:1px solid #cbd5e1;border-radius:8px;font-size:16px;font-family:inherit}
+.btn{display:block;width:100%;padding:13px;background:#be185d;color:#fff;border:none;border-radius:10px;font-size:17px;font-weight:700;cursor:pointer}
+.btn:hover{background:#9d174d}
+.result-box{margin-top:18px;background:#fdf2f8;border:1px solid #f9a8d4;border-radius:12px;padding:18px;font-size:17px}
+.result-box .big{font-size:26px;font-weight:700;color:#9d174d}
+.result-box .row{display:flex;justify-content:space-between;border-bottom:1px dashed #f9a8d4;padding:7px 0}
+.result-box .row:last-child{border-bottom:none}
+.countdown{display:flex;gap:10px;justify-content:center;margin-top:14px}
+.countdown .cd{background:#fff;border:1px solid #f9a8d4;border-radius:10px;padding:10px 14px;text-align:center;min-width:74px}
+.countdown .cd b{display:block;font-size:24px;color:#9d174d}
+.countdown .cd span{font-size:12px;color:#64748b}
+.note{background:#fffbeb;border:1px solid #fde68a;border-radius:10px;padding:12px 16px;font-size:14px;margin:16px 0;font-family:Arial,Helvetica,sans-serif}
+main{max-width:720px;margin:0 auto;padding:36px 20px}
+section{margin-bottom:40px}
+h2.sec{font-size:25px;margin-bottom:6px;color:#9d174d}
+.sec-sub{color:#64748b;margin-bottom:18px;font-family:Arial,Helvetica,sans-serif}
+.tool-list{display:flex;flex-direction:column;gap:12px}
+.tool-card{display:block;background:#fff;border:1px solid #e2e8f0;border-radius:12px;padding:18px 20px}
+.tool-card h3{font-size:18px;margin-bottom:4px}
+.tool-card p{font-size:14px;color:#64748b;font-family:Arial,Helvetica,sans-serif}
+.article-list{display:flex;flex-direction:column;gap:20px}
+.article-card{display:flex;gap:16px;background:#fff;border:1px solid #e2e8f0;border-radius:12px;overflow:hidden}
+.article-card img{width:200px;min-height:140px;object-fit:cover;display:block}
+.article-card .card-body{padding:16px 16px 16px 0}
+.article-card h3{font-size:17px;margin-bottom:6px;line-height:1.4}
+.article-card p{font-size:14px;color:#64748b;font-family:Arial,Helvetica,sans-serif}
+.article-page img.hero-img{width:100%;height:auto;border-radius:12px;margin:16px 0 24px}
+.article-page h1{font-size:30px;line-height:1.3;margin-bottom:8px}
+.article-page h2{font-size:22px;margin:26px 0 10px;color:#9d174d}
+.article-page p{margin-bottom:14px}
+.article-page ul,.article-page ol{margin:0 0 14px 22px}
+.article-page li{margin-bottom:6px}
+.faq{background:#fdf2f8;border:1px solid #f9a8d4;border-radius:12px;padding:20px;margin-top:28px}
+.faq h2{margin-top:0}
+.faq p{margin-bottom:12px}
+.meta{color:#94a3b8;font-size:14px;margin-bottom:10px;font-family:Arial,Helvetica,sans-serif}
+footer{background:#4c0519;color:#fbcfe8;padding:32px 20px;margin-top:20px;text-align:center}
+footer a{color:#f9a8d4}
+footer p{font-size:14px;font-family:Arial,Helvetica,sans-serif}
+@media(max-width:640px){.hero h1{font-size:27px}.article-card{flex-direction:column}.article-card img{width:100%;height:180px}.countdown{flex-wrap:wrap}}
+</style>
+</head>
+<body>
+<header><div class="header-in"><a class="logo" href="/index.html">Age<span>Calculator</span></a>
+<nav><a href="/index.html">Home</a><a href="/tools/birthday-countdown.html">Birthday Countdown</a><a href="/tools/zodiac-finder.html">Zodiac Finder</a><a href="/tools/age-in-days-weeks-months.html">Age in Days</a><a href="/tools/retirement-age-calculator.html">Retirement Age</a><a href="/about.html">About</a></nav></div></header>
+<main><div class="article-page">
+<p class="meta"><a href="/index.html">Home</a> &rsaquo; Guides &rsaquo; Your Baby&#x27;s First-Year Age Milestones: Month by Month</p>
+<h1>Your Baby&#x27;s First-Year Age Milestones: Month by Month</h1>
+<p class="meta">AgeCalculator guides</p>
+<img class="hero-img" src="/images/baby-age-milestones.jpg" alt="Your Baby&#x27;s First-Year Age Milestones: Month by Month">
+<p>A baby's first year is the fastest period of change in a human life. In twelve months, a newborn who cannot hold up their head becomes a toddler who walks, talks and feeds themselves. Parents track this transformation in weeks and months, and they worry about every milestone. This guide explains what to expect month by month, and which differences are normal and which deserve a conversation with your doctor.</p>
+<h2>The first three months</h2>
+<p>In the first month, your baby will sleep most of the time, feed every two to three hours, and begin to focus on faces. By six weeks, most babies smile socially — the first real smile, not a reflex — and by two months they coo and follow objects with their eyes. By three months, most babies lift their heads during tummy time, smile readily, and begin to babble. These early milestones are about connection: your baby is learning that you are there, that you respond, and that the world is safe.</p>
+<p>The first three months are also the hardest for parents, because sleep is broken and the baby's needs are constant. The best advice is to accept help, to sleep when the baby sleeps, and to remember that the difficult phase passes. If you are worried about your baby's development, your health visitor or paediatrician is the right person to ask — not the internet, and not other parents, whose babies all develop at different rates.</p>
+<h2>Four to eight months</h2>
+<p>Between four and six months, most babies roll over, sit with support, reach for objects, and begin to laugh out loud. This is also when solid food usually starts, around six months, and when many babies begin to sleep for longer stretches at night. Between six and eight months, most babies sit without support, transfer objects from hand to hand, babble with consonants, and begin to show stranger anxiety — a healthy sign that they know who their people are.</p>
+<p>This is the age when babies become interactive: they play peekaboo, they respond to their name, and they begin to understand simple words. It is also the age when teething usually starts, and when some babies begin to crawl. The range of normal is wide — some babies crawl at six months and some never crawl at all, going straight to walking — and the order of milestones matters less than the steady progress.</p>
+<h2>Nine to twelve months</h2>
+<p>Between nine and twelve months, most babies pull themselves up to stand, cruise along furniture, and take their first steps. They say their first words — usually mama or dada — wave goodbye, play simple games, and begin to feed themselves with finger foods. By twelve months, most babies are walking or close to it, saying several words, and understanding simple instructions. It is a remarkable transformation from the newborn of a year ago.</p>
+<p>The first birthday is a celebration of all of it — and a good moment to reflect. Your baby has tripled their birth weight, grown about 25 centimetres, and learned to communicate, to move, and to trust. The milestones in this guide are averages, and every baby is different: some walk at nine months and some at eighteen, and both are normal. If you are concerned, talk to your doctor, but remember that the range of normal is wide and that your baby is developing at their own pace.</p>
+<div class="faq"><h2>Frequently asked questions</h2>
+<p><strong>When do babies usually smile?</strong><br>Social smiling usually appears around six weeks.</p>
+<p><strong>When do babies start solids?</strong><br>Around six months, when they can sit with support and show interest in food.</p>
+<p><strong>When do babies usually walk?</strong><br>Most walk between 12 and 15 months, but the normal range is 9 to 18 months.</p>
+</div>
+<p style="margin-top:24px"><a href="/index.html">&larr; Back to all guides</a></p></div></main>
+<footer><p><strong>AgeCalculator</strong> — free, exact age tools that run entirely in your browser.</p>
+<p><a href="/about.html">About</a> &middot; <a href="/contact.html">Contact</a> &middot; <a href="/privacy.html">Privacy Policy</a> &middot; <a href="/disclaimer.html">Disclaimer</a></p></footer>
+</body>
+</html>

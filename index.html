@@ -1,0 +1,154 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Age Calculator — Exact Age, Birthday Countdown &amp; Zodiac Sign</title>
+<meta name="description" content="Work out your exact age, count down to your next birthday, and find your zodiac sign — free and private.">
+<style>
+*{box-sizing:border-box;margin:0;padding:0}
+body{font-family:Georgia,'Times New Roman',serif;color:#334155;background:#fdf8f6;line-height:1.7}
+a{color:#9d174d;text-decoration:none}
+a:hover{text-decoration:underline}
+header{background:#881337;color:#fff;padding:16px 0}
+.header-in{max-width:720px;margin:0 auto;padding:0 20px;text-align:center}
+.logo{font-size:26px;font-weight:700;color:#fff}
+.logo span{color:#fbcfe8}
+nav{margin-top:8px}
+nav a{color:#fbcfe8;margin:0 10px;font-weight:600;font-size:15px}
+nav a:hover{color:#fff}
+.hero{background:linear-gradient(180deg,#881337,#be185d);color:#fff;padding:48px 20px 40px;text-align:center}
+.hero h1{font-size:34px;line-height:1.25;margin-bottom:10px}
+.hero p{font-size:17px;max-width:600px;margin:0 auto 22px;color:#fce7f3}
+.calculator{background:#fff;color:#334155;max-width:560px;margin:0 auto;padding:26px;border-radius:16px;box-shadow:0 12px 32px rgba(0,0,0,.2);text-align:left}
+.calculator h2{font-size:20px;margin-bottom:14px;color:#9d174d}
+.field{margin-bottom:14px}
+.field label{display:block;font-size:14px;font-weight:700;margin-bottom:5px;color:#475569}
+.field input,.field select{width:100%;padding:11px;border:1px solid #cbd5e1;border-radius:8px;font-size:16px;font-family:inherit}
+.btn{display:block;width:100%;padding:13px;background:#be185d;color:#fff;border:none;border-radius:10px;font-size:17px;font-weight:700;cursor:pointer}
+.btn:hover{background:#9d174d}
+.result-box{margin-top:18px;background:#fdf2f8;border:1px solid #f9a8d4;border-radius:12px;padding:18px;font-size:17px}
+.result-box .big{font-size:26px;font-weight:700;color:#9d174d}
+.result-box .row{display:flex;justify-content:space-between;border-bottom:1px dashed #f9a8d4;padding:7px 0}
+.result-box .row:last-child{border-bottom:none}
+.countdown{display:flex;gap:10px;justify-content:center;margin-top:14px}
+.countdown .cd{background:#fff;border:1px solid #f9a8d4;border-radius:10px;padding:10px 14px;text-align:center;min-width:74px}
+.countdown .cd b{display:block;font-size:24px;color:#9d174d}
+.countdown .cd span{font-size:12px;color:#64748b}
+.note{background:#fffbeb;border:1px solid #fde68a;border-radius:10px;padding:12px 16px;font-size:14px;margin:16px 0;font-family:Arial,Helvetica,sans-serif}
+main{max-width:720px;margin:0 auto;padding:36px 20px}
+section{margin-bottom:40px}
+h2.sec{font-size:25px;margin-bottom:6px;color:#9d174d}
+.sec-sub{color:#64748b;margin-bottom:18px;font-family:Arial,Helvetica,sans-serif}
+.tool-list{display:flex;flex-direction:column;gap:12px}
+.tool-card{display:block;background:#fff;border:1px solid #e2e8f0;border-radius:12px;padding:18px 20px}
+.tool-card h3{font-size:18px;margin-bottom:4px}
+.tool-card p{font-size:14px;color:#64748b;font-family:Arial,Helvetica,sans-serif}
+.article-list{display:flex;flex-direction:column;gap:20px}
+.article-card{display:flex;gap:16px;background:#fff;border:1px solid #e2e8f0;border-radius:12px;overflow:hidden}
+.article-card img{width:200px;min-height:140px;object-fit:cover;display:block}
+.article-card .card-body{padding:16px 16px 16px 0}
+.article-card h3{font-size:17px;margin-bottom:6px;line-height:1.4}
+.article-card p{font-size:14px;color:#64748b;font-family:Arial,Helvetica,sans-serif}
+.article-page img.hero-img{width:100%;height:auto;border-radius:12px;margin:16px 0 24px}
+.article-page h1{font-size:30px;line-height:1.3;margin-bottom:8px}
+.article-page h2{font-size:22px;margin:26px 0 10px;color:#9d174d}
+.article-page p{margin-bottom:14px}
+.article-page ul,.article-page ol{margin:0 0 14px 22px}
+.article-page li{margin-bottom:6px}
+.faq{background:#fdf2f8;border:1px solid #f9a8d4;border-radius:12px;padding:20px;margin-top:28px}
+.faq h2{margin-top:0}
+.faq p{margin-bottom:12px}
+.meta{color:#94a3b8;font-size:14px;margin-bottom:10px;font-family:Arial,Helvetica,sans-serif}
+footer{background:#4c0519;color:#fbcfe8;padding:32px 20px;margin-top:20px;text-align:center}
+footer a{color:#f9a8d4}
+footer p{font-size:14px;font-family:Arial,Helvetica,sans-serif}
+@media(max-width:640px){.hero h1{font-size:27px}.article-card{flex-direction:column}.article-card img{width:100%;height:180px}.countdown{flex-wrap:wrap}}
+</style>
+</head>
+<body>
+<header><div class="header-in"><a class="logo" href="/index.html">Age<span>Calculator</span></a>
+<nav><a href="/index.html">Home</a><a href="/tools/birthday-countdown.html">Birthday Countdown</a><a href="/tools/zodiac-finder.html">Zodiac Finder</a><a href="/tools/age-in-days-weeks-months.html">Age in Days</a><a href="/tools/retirement-age-calculator.html">Retirement Age</a><a href="/about.html">About</a></nav></div></header>
+<div class="hero">
+<h1>How Old Are You, Exactly?</h1>
+<p>Work out your exact age, count down to your next birthday, and find your zodiac sign — free and private.</p>
+<div class="calculator">
+<h2>Age Calculator</h2>
+<div class="field"><label for="dob">Your date of birth</label><input id="dob" type="date" max="2026-11-22"></div>
+<button class="btn" type="button" id="calc-age">Calculate My Age</button>
+<div class="result-box" id="age-result" style="display:none">
+<div class="big" id="age-big"></div>
+<div class="row"><span>Next birthday</span><strong id="age-next"></strong></div>
+<div class="row"><span>Days until next birthday</span><strong id="age-count"></strong></div>
+<div class="row"><span>Zodiac sign</span><strong id="age-zodiac"></strong></div>
+<div class="row"><span>Total days lived</span><strong id="age-days"></strong></div>
+<div class="row"><span>Day of the week you were born</span><strong id="age-weekday"></strong></div>
+</div>
+<p style="margin-top:12px;font-size:13px;color:#64748b">Your date never leaves your browser — the calculation runs entirely on your device.</p>
+</div>
+</div>
+<main>
+<section><h2 class="sec">More age tools</h2><p class="sec-sub">Four more free tools for birthdays, zodiac and retirement.</p>
+<div class="tool-list">
+<a class="tool-card" href="tools/birthday-countdown.html"><h3>Birthday Countdown</h3><p>Count the days, hours and minutes until your next birthday.</p></a><a class="tool-card" href="tools/zodiac-finder.html"><h3>Zodiac Finder</h3><p>Enter any birth date and find the Western zodiac sign.</p></a><a class="tool-card" href="tools/age-in-days-weeks-months.html"><h3>Age in Days, Weeks & Months</h3><p>See your age expressed in total days, weeks and months.</p></a><a class="tool-card" href="tools/retirement-age-calculator.html"><h3>Retirement Age Calculator</h3><p>Enter your birth date and a retirement age to find your retirement date.</p></a>
+</div></section>
+<section><h2 class="sec">Guides: age, birthdays and zodiac</h2><p class="sec-sub">Original, practical guides to understanding age and celebrating it.</p>
+<div class="article-list">
+<a class="article-card" href="/guides/how-to-calculate-age.html"><img src="/images/how-to-calculate-age.jpg" alt="How to Calculate Your Exact Age in Years, Months and Days" loading="lazy"><div class="card-body"><h3>How to Calculate Your Exact Age in Years, Months and Days</h3><p>Learn how to work out your exact age — years, months and days — by hand, with the borrowing method, leap years and common mistakes explained.</p></div></a><a class="article-card" href="/guides/age-in-days-weeks-months.html"><img src="/images/age-in-days-weeks-months.jpg" alt="Your Age in Days, Weeks and Months: What the Numbers Mean" loading="lazy"><div class="card-body"><h3>Your Age in Days, Weeks and Months: What the Numbers Mean</h3><p>Convert your age into days, weeks and months, and learn why each measure is used — from baby milestones to retirement planning.</p></div></a><a class="article-card" href="/guides/zodiac-signs-explained.html"><img src="/images/zodiac-signs-explained.jpg" alt="The 12 Zodiac Signs Explained: Dates, Traits and Elements" loading="lazy"><div class="card-body"><h3>The 12 Zodiac Signs Explained: Dates, Traits and Elements</h3><p>A complete guide to the twelve zodiac signs — their dates, elements, ruling planets and traditional personality traits — and how to find yours.</p></div></a><a class="article-card" href="/guides/chinese-zodiac-guide.html"><img src="/images/chinese-zodiac-guide.jpg" alt="The Chinese Zodiac: Animals, Years and What They Mean" loading="lazy"><div class="card-body"><h3>The Chinese Zodiac: Animals, Years and What They Mean</h3><p>A guide to the twelve animals of the Chinese zodiac — their years, elements, compatibility and the traditions of the Lunar New Year.</p></div></a><a class="article-card" href="/guides/birthday-party-ideas-adults.html"><img src="/images/birthday-party-ideas-adults.jpg" alt="Birthday Party Ideas for Adults: 15 Ways to Celebrate Well" loading="lazy"><div class="card-body"><h3>Birthday Party Ideas for Adults: 15 Ways to Celebrate Well</h3><p>Fifteen practical birthday party ideas for adults — from dinner parties and tasting evenings to outdoor adventures and low-key nights in.</p></div></a><a class="article-card" href="/guides/birthday-ideas-kids.html"><img src="/images/birthday-ideas-kids.jpg" alt="Birthday Party Ideas for Kids: Fun, Simple and Stress-Free" loading="lazy"><div class="card-body"><h3>Birthday Party Ideas for Kids: Fun, Simple and Stress-Free</h3><p>Practical birthday party ideas for children of every age — themes, games, food and planning tips that keep the day fun and the stress low.</p></div></a><a class="article-card" href="/guides/milestone-birthdays.html"><img src="/images/milestone-birthdays.jpg" alt="Milestone Birthdays Worth Celebrating: 18, 21, 30, 40, 50 and Beyond" loading="lazy"><div class="card-body"><h3>Milestone Birthdays Worth Celebrating: 18, 21, 30, 40, 50 and Beyond</h3><p>What makes a milestone birthday special — the legal, cultural and personal significance of 16, 18, 21, 30, 40, 50, 60 and 100.</p></div></a><a class="article-card" href="/guides/retirement-planning-age.html"><img src="/images/retirement-planning-age.jpg" alt="Planning Retirement by Age: What to Do in Your 20s, 30s, 40s and 50s" loading="lazy"><div class="card-body"><h3>Planning Retirement by Age: What to Do in Your 20s, 30s, 40s and 50s</h3><p>A decade-by-decade guide to retirement planning — how much to save, when to start, and the milestones that matter at every age.</p></div></a><a class="article-card" href="/guides/when-can-i-retire.html"><img src="/images/when-can-i-retire.jpg" alt="When Can I Retire? A Practical Guide to Retirement Age" loading="lazy"><div class="card-body"><h3>When Can I Retire? A Practical Guide to Retirement Age</h3><p>How to work out when you can retire — state pension age, early retirement, and the numbers that decide whether you can afford to stop working.</p></div></a><a class="article-card" href="/guides/age-milestones-legal.html"><img src="/images/age-milestones-legal.jpg" alt="Legal Age Milestones Around the World: When You Can Vote, Drive and Drink" loading="lazy"><div class="card-body"><h3>Legal Age Milestones Around the World: When You Can Vote, Drive and Drink</h3><p>A guide to the ages that matter in law — voting, driving, drinking, marriage and criminal responsibility — and how they differ by country.</p></div></a><a class="article-card" href="/guides/leap-year-birthdays.html"><img src="/images/leap-year-birthdays.jpg" alt="Born on 29 February: What Leap Year Birthdays Are Really Like" loading="lazy"><div class="card-body"><h3>Born on 29 February: What Leap Year Birthdays Are Really Like</h3><p>A guide to leap day birthdays — how often they happen, when leap babies celebrate, and the legal and practical quirks of being born on 29 February.</p></div></a><a class="article-card" href="/guides/next-birthday-countdown.html"><img src="/images/next-birthday-countdown.jpg" alt="Counting Down to Your Next Birthday: Ideas, Traditions and Planning" loading="lazy"><div class="card-body"><h3>Counting Down to Your Next Birthday: Ideas, Traditions and Planning</h3><p>How to make the most of the countdown to your birthday — planning tips, countdown traditions, and ways to celebrate the wait itself.</p></div></a><a class="article-card" href="/guides/age-and-health.html"><img src="/images/age-and-health.jpg" alt="Age and Health: What Changes in Your Body by Decade" loading="lazy"><div class="card-body"><h3>Age and Health: What Changes in Your Body by Decade</h3><p>A decade-by-decade guide to how the body changes with age — your 20s, 30s, 40s, 50s, 60s and beyond — and what you can do to stay healthy.</p></div></a><a class="article-card" href="/guides/age-difference-calculator-guide.html"><img src="/images/age-difference-calculator-guide.jpg" alt="Age Gaps in Relationships and Families: What the Numbers Really Mean" loading="lazy"><div class="card-body"><h3>Age Gaps in Relationships and Families: What the Numbers Really Mean</h3><p>A thoughtful guide to age differences — in couples, siblings and friends — what research says, and why the number matters less than the stage of life.</p></div></a><a class="article-card" href="/guides/famous-birthdays-history.html"><img src="/images/famous-birthdays-history.jpg" alt="Famous Birthdays That Changed History" loading="lazy"><div class="card-body"><h3>Famous Birthdays That Changed History</h3><p>The birthdays of people who changed the world — from scientists and artists to leaders and inventors — and what their lives tell us about age and achievement.</p></div></a><a class="article-card" href="/guides/birthstones-by-month.html"><img src="/images/birthstones-by-month.jpg" alt="Birthstones for Every Month: History, Meaning and How to Choose" loading="lazy"><div class="card-body"><h3>Birthstones for Every Month: History, Meaning and How to Choose</h3><p>A complete guide to birthstones — the traditional stone for each month, its history, its meaning, and how to choose and care for birthstone jewellery.</p></div></a><a class="article-card" href="/guides/astrology-vs-astronomy.html"><img src="/images/astrology-vs-astronomy.jpg" alt="Astrology vs Astronomy: What&#x27;s the Difference?" loading="lazy"><div class="card-body"><h3>Astrology vs Astronomy: What&#x27;s the Difference?</h3><p>A clear explanation of the difference between astrology and astronomy — their shared history, how they split, and what each one can actually tell you.</p></div></a><a class="article-card" href="/guides/age-verification-online.html"><img src="/images/age-verification-online.jpg" alt="Age Verification Online: How the Internet Checks Your Age" loading="lazy"><div class="card-body"><h3>Age Verification Online: How the Internet Checks Your Age</h3><p>How websites and apps verify your age — from self-declaration to ID checks and age estimation — and what it means for your privacy.</p></div></a><a class="article-card" href="/guides/turning-30-40-50-guide.html"><img src="/images/turning-30-40-50-guide.jpg" alt="Turning 30, 40 or 50: What to Expect and How to Celebrate" loading="lazy"><div class="card-body"><h3>Turning 30, 40 or 50: What to Expect and How to Celebrate</h3><p>An honest guide to the big decade birthdays — what actually changes at 30, 40 and 50, and how to make each one a celebration rather than a crisis.</p></div></a><a class="article-card" href="/guides/baby-age-milestones.html"><img src="/images/baby-age-milestones.jpg" alt="Your Baby&#x27;s First-Year Age Milestones: Month by Month" loading="lazy"><div class="card-body"><h3>Your Baby&#x27;s First-Year Age Milestones: Month by Month</h3><p>A month-by-month guide to your baby&#x27;s first year — the milestones to expect at each age, and when to talk to your doctor.</p></div></a>
+</div></section>
+<section><h2 class="sec">Why use this age calculator?</h2>
+<p>Your exact age is more than a number: it decides school enrolment, insurance, retirement and legal milestones. This calculator works it out to the day, counts down to your next birthday, and tells you your zodiac sign — all without sending your birth date anywhere. Enter your date of birth above and your answer appears instantly.</p></section>
+</main><script>
+
+function zodiac(m,d){
+ const z=[[1,20,'Capricorn'],[2,19,'Aquarius'],[3,20,'Pisces'],[4,20,'Aries'],[5,21,'Taurus'],[6,21,'Gemini'],[7,23,'Cancer'],[8,23,'Leo'],[9,23,'Virgo'],[10,23,'Libra'],[11,22,'Scorpio'],[12,22,'Sagittarius'],[1,20,'Capricorn']];
+ for(let i=0;i<12;i++){ if(m===z[i][0]&&d<z[i][1]) return z[i][2]; if(m===z[i][0]&&d>=z[i][1]) return z[i+1][2]; }
+ return 'Capricorn';
+}
+function exactAge(dob, now){
+ let y=now.getFullYear()-dob.getFullYear(), mo=now.getMonth()-dob.getMonth(), d=now.getDate()-dob.getDate();
+ if(d<0){ mo--; const prev=new Date(now.getFullYear(),now.getMonth(),0); d+=prev.getDate(); }
+ if(mo<0){ y--; mo+=12; }
+ return {years:y, months:mo, days:d};
+}
+function nextBirthday(dob, now){
+ let y=now.getFullYear();
+ let nb=new Date(y, dob.getMonth(), dob.getDate());
+ if(dob.getMonth()===1&&dob.getDate()===29&&nb.getMonth()!==1) nb=new Date(y,1,28);
+ const today=new Date(now.getFullYear(),now.getMonth(),now.getDate());
+ if(nb<today){ nb=new Date(y+1, dob.getMonth(), dob.getDate()); if(dob.getMonth()===1&&dob.getDate()===29&&nb.getMonth()!==1) nb=new Date(y+1,1,28); }
+ const diff=nb.getTime()-today.getTime();
+ const days=Math.round(diff/86400000);
+ return {date:nb, days:days, hours:0, mins:0};
+}
+function fmtDate(dt){ return dt.toLocaleDateString('en-US',{weekday:'long',year:'numeric',month:'long',day:'numeric'}); }
+
+document.getElementById('calc-age').addEventListener('click',()=>{
+ const v=document.getElementById('dob').value;
+ const box=document.getElementById('age-result');
+ if(!v){ box.style.display='block'; box.innerHTML='<p>Please choose your date of birth first.</p>'; return; }
+ const dob=new Date(v+'T00:00:00');
+ const now=new Date();
+ if(dob>now){ box.style.display='block'; box.innerHTML='<p>That date is in the future. Please enter a date of birth in the past.</p>'; return; }
+ const a=exactAge(dob, now);
+ const nb=nextBirthday(dob, now);
+ const daysLived=Math.floor((new Date(now.getFullYear(),now.getMonth(),now.getDate())-new Date(dob.getFullYear(),dob.getMonth(),dob.getDate()))/86400000);
+ box.style.display='block';
+ box.innerHTML='<div class="big" id="age-big"></div>'
+  +'<div class="row"><span>Next birthday</span><strong id="age-next"></strong></div>'
+  +'<div class="row"><span>Days until next birthday</span><strong id="age-count"></strong></div>'
+  +'<div class="row"><span>Zodiac sign</span><strong id="age-zodiac"></strong></div>'
+  +'<div class="row"><span>Total days lived</span><strong id="age-days"></strong></div>'
+  +'<div class="row"><span>Day of the week you were born</span><strong id="age-weekday"></strong></div>';
+ document.getElementById('age-big').textContent=a.years+' years, '+a.months+' months, '+a.days+' days';
+ document.getElementById('age-next').textContent=fmtDate(nb.date);
+ document.getElementById('age-count').textContent=nb.days+(nb.days===1?' day':' days');
+ document.getElementById('age-zodiac').textContent=zodiac(dob.getMonth()+1, dob.getDate());
+ document.getElementById('age-days').textContent=daysLived.toLocaleString('en-US');
+ document.getElementById('age-weekday').textContent=dob.toLocaleDateString('en-US',{weekday:'long'});
+});
+</script>
+<footer><p><strong>AgeCalculator</strong> — free, exact age tools that run entirely in your browser.</p>
+<p><a href="/about.html">About</a> &middot; <a href="/contact.html">Contact</a> &middot; <a href="/privacy.html">Privacy Policy</a> &middot; <a href="/disclaimer.html">Disclaimer</a></p></footer>
+</body>
+</html>
